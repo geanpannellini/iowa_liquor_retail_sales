@@ -143,6 +143,8 @@ The schema is above:
 
 The gold layer is the business layer and can be used for both the business querys and platform data views(Lightdash, Looker, Metabase).
 
+> Please, access the topic "About business questions" above.
+
 ## Lineage graphs
 
 <img width="800" alt="image" src="https://github.com/geanpannellini/iowa_liquor_retail_sales/assets/70926945/df597a27-9013-441d-82d5-9f0caaa27db8">
