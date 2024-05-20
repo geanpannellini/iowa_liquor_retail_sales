@@ -8,12 +8,15 @@ The primary model, which is [Sales Model](models/gold/sales.sql), provides the m
 
  `1_a. Calculate the total products and revenue sold over time by quarter` [Analyses, Answer 1_a](analyses/answer_1_a.sql)
 
-| Quarter | Total Products Sold | Total Revenue (USD) |
-|---------|---------------------|---------------|
-| Q1      | 15,548,352          | 2,184,055,213.86 |
-| Q2      | 16,849,908          | 2,452,430,845.84 |
-| Q3      | 16,102,263          | 2,342,578,251.40 |
-| Q4      | 16,672,083          | 2,574,562,232.33 |
+> Filter by 2023
+
+| quarter | total_products_sold | total_revenue       |
+| ------- | ------------------- | ------------------- |
+| 1       | 1259492             | 204854684.62999138 |
+| 2       | 1539291             | 261004104.8299984  |
+| 3       | 1455564             | 252157732.39999866 |
+| 4       | 1513183             | 272791124.0000002  |
+
 
  `1_b. Identify the month where the revenue sold was 10% above the average.` [Analyses, Answer 1_b](analyses/answer_1_b.sql)
 
