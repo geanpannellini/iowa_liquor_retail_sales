@@ -136,14 +136,20 @@ The schema is above:
 > There are a lot of modes to represent the silver layer, using Star Schema or Snowflake methods.
 > In this case, I am using Star Schema because the main motivation is to organize the data. Please, read my article about [Performance of Different Data Modeling Approaches in Modern Storage Architecture](https://github.com/geanpannellini/MBA_final_project)
 
-> Some characteristic about the silver layer is the Data Catalog can use these tables to incentive a data-driven mindset to the company
+> Some characteristic of the silver layer is the Data Catalog can use these tables to incentive a data-driven mindset to the company
 > Every dimension is here making "easy" access.
 
 ## Gold
 
-The gold layer is the business layer and can be used for both the business querys and platform data views(Lightdash, Looker, Metabase).
+The gold layer is the business layer and can be used for both business queries and platform data views(Lightdash, Looker, Metabase).
 
 > Please, access the topic "About business questions" above.
+
+Some tables can use another configuration, in this case, we don't have an example but here is another configuration for incremental tables:
+  `materialized='incremental'`,
+  `unique_key='order_id'`,
+  `strategy='timestamp'`,
+  `updated_at='order_date'`
 
 ## Lineage graphs
 
