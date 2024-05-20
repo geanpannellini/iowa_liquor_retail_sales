@@ -1,6 +1,7 @@
 {{
     config(
-        alias='dim_vendor'
+        alias='dim_vendor',
+        materialized='table'
     )
 }}
 
