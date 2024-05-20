@@ -1,6 +1,7 @@
 {{
     config(
-        alias='dim_date'
+        alias='dim_date',
+        materialized='table'
     )
 }}
 
