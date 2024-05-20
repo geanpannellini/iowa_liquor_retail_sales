@@ -161,3 +161,13 @@ The gold layer is the business layer and can be used for both the business query
 ## Additional information: Stack
 
 <img width="447" alt="image" src="https://github.com/geanpannellini/iowa_liquor_retail_sales/assets/70926945/5b6f6caf-9209-4bd7-a36c-bd2bbcfc04d8">
+
+# About the Data architecture to "real-time" solution
+
+<img width="800" alt="image" src="https://github.com/geanpannellini/iowa_liquor_retail_sales/assets/70926945/8bc4ad20-c4e4-4a6f-ada2-7d761867cdae">
+
+The data pipeline for real-time data involves a continuous flow of data that is captured, processed, and delivered instantly. Firstly, data is collected in real-time from various sources such as sensors, applications, or transactional systems. Next, this data is processed in real-time, typically using streaming platforms or event processing. Finally, the processed data is delivered to storage systems or visualization applications for immediate analysis and real-time decision-making. This pipeline enables organizations to gain instant insights and react swiftly to ongoing events.
+
+Real-time data flow is typically costly, hence it is essential to identify which data truly needs to be processed in real-time. Additionally, it needs to be understood if it's feasible to collect data and place it on the same data modeling pipeline as batch data.
+
+In general, my focus would be on the initial part of data ingestion for real-time data collection.
