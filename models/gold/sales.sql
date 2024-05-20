@@ -29,22 +29,16 @@ SELECT
     f.sale_dollars AS sale_dollars,
     f.volume_sold_liters AS volume_sold_liters,
     f.volume_sold_gallons AS volume_sold_gallons
-FROM
-    {{ ref('fact_sales') }} AS f
-JOIN
-    {{ ref('dim_store') }} AS s 
+FROM {{ ref('fact_sales') }} AS f
+JOIN {{ ref('dim_store') }} AS s 
     ON f.store_number = s.store_number
-JOIN
-    {{ ref('dim_date') }} AS d 
+JOIN {{ ref('dim_date') }} AS d 
     ON f.date = d.date
-JOIN
-    {{ ref('dim_category') }} AS c 
+JOIN {{ ref('dim_category') }} AS c 
     ON f.category = c.category
-JOIN
-    {{ ref('dim_vendor') }} AS v 
+JOIN {{ ref('dim_vendor') }} AS v 
     ON f.vendor_number = v.vendor_number
-JOIN
-    {{ ref('dim_item') }} AS i 
+JOIN {{ ref('dim_item') }} AS i 
     ON f.item_number = i.item_number
 
 /*WHERE invoice_and_item_number = 'INV-59246400001'*/
