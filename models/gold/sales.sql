@@ -1,6 +1,7 @@
 {{
     config(
-        alias='sales'
+        alias='sales',
+        materialized='table'
     )
 }}
 
