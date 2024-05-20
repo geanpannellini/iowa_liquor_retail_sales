@@ -5,6 +5,8 @@ SELECT
     SUM(sale_dollars) AS total_revenue
 FROM
     {{ ref('sales') }}
+WHERE 
+    EXTRACT(year FROM date) = 2023
 GROUP BY
     quarter
 ORDER BY
