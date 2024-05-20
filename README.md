@@ -110,9 +110,7 @@ The primary model, which is [Sales Model](models/gold/sales.sql), provides the m
 | JCL STORE                    | 3,015.72      |
 
 
-# About the Data Pipeline
-
-### 2. Model architecture
+# About the Data Pipeline - Model architecture
 
 All tables are possibly found [here](models). 
 
@@ -134,16 +132,16 @@ The schema is above:
 
 The gold layer is the business layer and is possible to use for the business and data view.
 
-### 3. Lineage graphs
+## Lineage graphs
 
 <img width="800" alt="image" src="https://github.com/geanpannellini/iowa_liquor_retail_sales/assets/70926945/df597a27-9013-441d-82d5-9f0caaa27db8">
 
-### 4. Data quality
+## Data quality
 
 > dim_vendor duplicado (XXX)
 > dim_store null (XXX)
 
-### 5. Tips around macros, data validation, and documentation
+## Tips around macros, data validation, and documentation
 
 > :point_right: [Macros] I created a simple "dates macro" to help with monthly, quarterly, semiannually. To check a case, [click here.](macros/dates.sql) To check an application, [click here.](analyses/answer_1_a.sql)
 
@@ -151,7 +149,7 @@ The gold layer is the business layer and is possible to use for the business and
 
 > :point_right: [Documentation] In All tables are implemented tables and columns describe the schema is plugged with Data Catalog. To check a case, [click here.](models/silver/schema.yml)
 
-### 5. Additional information: Stack
+## Additional information: Stack
 
 <img width="477" alt="image" src="">
 
