@@ -140,11 +140,12 @@ The gold layer is the business layer and is possible to use for the business and
 
 ### 4. Data quality
 
-> 
+> dim_vendor duplicado (XXX)
+> dim_store null (XXX)
 
 ### 5. Tips around macros, data validation, and documentation
 
-> :point_right: [Macros] I created the dates macro to help with monthly, quarterly, semiannually. To check a case, [click here.](macros/dates.sql) To check an application, [click here.](analyses/answer_1_a.sql)
+> :point_right: [Macros] I created a simple "dates macro" to help with monthly, quarterly, semiannually. To check a case, [click here.](macros/dates.sql) To check an application, [click here.](analyses/answer_1_a.sql)
 
 > :point_right: [Data Validation] In All tables are implemented tests in the primary key and important columns. To check a case, [click here.](models/sources/sources.yml)
 
