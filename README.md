@@ -116,11 +116,13 @@ The primary model, which is [Sales Model](models/gold/sales.sql), provides the m
 
 All tables are possibly found [here](models). 
 
-I am using the medallion concept, and because of that I split the layers using `bronze`, `silver`, and `gold`. 
+I am using the [Medallion Architecture](https://www.databricks.com/glossary/medallion-architecture), and because of that I split the layers using `bronze`, `silver`, and `gold`. 
 
 ## Bronze
 
-The bronze layer is basic the data how it is. There is a staging layer (XXX - link here), that we can make small transformation.
+The bronze layer is the data ingestion and I don't modify the data. There is a [staging layer](models/sources/stg_sales.sql), where we can make a small transformation like switching the typo. 
+
+All tables are materialized by view in this stage.
 
 ## Silver
 The schema is above:
@@ -128,11 +130,15 @@ The schema is above:
 <img width="800" alt="image" src="https://github.com/geanpannellini/iowa_liquor_retail_sales/assets/70926945/15eee76d-b07f-40e7-866e-40c140431ed1">
 
 > [!IMPORTANT]
-> There are a lot of modes to represent the silver layer, using Star Schema or Snowflake methods. In this case, I am using Star Schema because the main motivation is to organize the data. Please, read my article about `XXX`
+> There are a lot of modes to represent the silver layer, using Star Schema or Snowflake methods.
+> In this case, I am using Star Schema because the main motivation is to organize the data. Please, read my article about [Performance of Different Data Modeling Approaches in Modern Storage Architecture](https://github.com/geanpannellini/MBA_final_project)
+
+> Some characteristic about the silver layer is the Data Catalog can use these tables to incentive a data-driven mindset to the company
+> Every dimension is here making "easy" access.
 
 ## Gold
 
-The gold layer is the business layer and is possible to use for the business and data view.
+The gold layer is the business layer and can be used for both the business querys and platform data views(Lightdash, Looker, Metabase).
 
 ## Lineage graphs
 
@@ -140,18 +146,18 @@ The gold layer is the business layer and is possible to use for the business and
 
 ## Data quality
 
-> dim_vendor duplicado (XXX)
-> dim_store null (XXX)
+> Looking at the dbt test:
+> Some data was duplicating the results. The `dim_vendor` was duplicated because there is some vendor_name that is equal.
+> The same thing was happening in `dim_store` and I understood that we need deleted the null data.
 
 ## Tips around macros, data validation, and documentation
 
 > :point_right: [Macros] I created a simple "dates macro" to help with monthly, quarterly, semiannually. To check a case, [click here.](macros/dates.sql) To check an application, [click here.](analyses/answer_1_a.sql)
 
-> :point_right: [Data Validation] In All tables are implemented tests in the primary key and important columns. To check a case, [click here.](models/sources/sources.yml)
+> :point_right: [Data Validation] In all tables, tests are implemented on the primary key and important columns. To check a case, [click here.](models/sources/sources.yml)
 
-> :point_right: [Documentation] In All tables are implemented tables and columns describe the schema is plugged with Data Catalog. To check a case, [click here.](models/silver/schema.yml)
+> :point_right: [Documentation] In all tables, the implemented tables and columns are described, and the schema can be integrated with the Data Catalog. To check a case, [click here.](models/silver/schema.yml)
 
 ## Additional information: Stack
 
-<img width="477" alt="image" src="">
-
+<img width="447" alt="image" src="https://github.com/geanpannellini/iowa_liquor_retail_sales/assets/70926945/5b6f6caf-9209-4bd7-a36c-bd2bbcfc04d8">
