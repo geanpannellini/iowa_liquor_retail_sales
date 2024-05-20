@@ -1,10 +1,8 @@
 # About Business Questions
 
-You can utilize the gold area to address business inquiries effectively.
+You can utilize the gold area to address business inquiries effectively and you can access the [dashboard](https://app.lightdash.cloud/projects/f2cbb3a3-d389-4972-bc59-a9f7edbade1a/dashboards/a59478a6-0b35-46e0-ad49-aa85f0bbbe9a/view/?filters=%7B%22dimensions%22%3A%5B%7B%22id%22%3A%228e9743e8-4cb4-43a8-b6e4-38c2c0cdcae7%22%2C%22operator%22%3A%22equals%22%2C%22target%22%3A%7B%22fieldId%22%3A%22sales_store_number%22%2C%22tableName%22%3A%22sales%22%2C%22fieldName%22%3A%22store_number%22%7D%2C%22disabled%22%3Afalse%2C%22values%22%3A%5B%222106%22%5D%7D%5D%2C%22metrics%22%3A%5B%5D%2C%22tableCalculations%22%3A%5B%5D%7D) in `Lightdash` using the gold layer.
 
-And you can access the [dashboard](https://app.lightdash.cloud/projects/f2cbb3a3-d389-4972-bc59-a9f7edbade1a/dashboards/a59478a6-0b35-46e0-ad49-aa85f0bbbe9a/view/?filters=%7B%22dimensions%22%3A%5B%7B%22id%22%3A%228e9743e8-4cb4-43a8-b6e4-38c2c0cdcae7%22%2C%22operator%22%3A%22equals%22%2C%22target%22%3A%7B%22fieldId%22%3A%22sales_store_number%22%2C%22tableName%22%3A%22sales%22%2C%22fieldName%22%3A%22store_number%22%7D%2C%22disabled%22%3Afalse%2C%22values%22%3A%5B%222106%22%5D%7D%5D%2C%22metrics%22%3A%5B%5D%2C%22tableCalculations%22%3A%5B%5D%7D) in `Lightdash` using the gold area.
-
-<img width="200" alt="image" src="https://github.com/geanpannellini/iowa_liquor_retail_sales/assets/70926945/5debf476-88b0-4e52-b54b-c8d7ece44ad3">
+<img width="800" alt="image" src="https://github.com/geanpannellini/iowa_liquor_retail_sales/assets/70926945/dbde4263-af89-4f67-9122-b8eea3dbaea1">
 
 The primary model, which is [Sales Model](models/gold/sales.sql), provides the means to answer all the previous questions mentioned.
 
